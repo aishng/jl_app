@@ -65,7 +65,7 @@ var JobBox = React.createClass({
 			}.bind(this), 
 			error: function(xhr, status, err) {
 			     console.log(arguments);  
-                             //	console.error(this.props.url, status, err.toString());
+           console.error(this.props.url, status, err.toString());
 			}.bind(this) 
 		});
 	},
@@ -74,7 +74,7 @@ var JobBox = React.createClass({
 	},
 	componentDidMount: function() {
 		this.loadCommentsFromServer();
-		//setInterval(this.loadCommentsFromServer, this.props.pollInterval);	
+		setInterval(this.loadCommentsFromServer, this.props.pollInterval);	
 	},
 	render: function(){
 		return(
